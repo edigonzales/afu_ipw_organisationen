@@ -26,7 +26,6 @@ java -jar /Users/stefan/apps/ili2pg-4.4.5/ili2pg-4.4.5.jar --dbhost localhost --
 1. Wenn die Organisationen nicht mitgeliefert werden und eine referenzierte Organisation in der DB fehlt, bricht Import ab ("dangling reference"). Dies kann umgangen werden, indem man `--createFk` nicht verwendet, dafür `--sqlEnableNull` und `--skipReferenceErrors`. Nicht ganz sicher, ob alle notwendig sind. 
 2. Wenn die Organisationen nicht mitgeliefert werden, muss für ilivaliator ein IPW-Organisationsfile vorliegen, damit gegen dieses File getestet werden kann (`--allObjectsAccessible`). Ohne diese Option ist die Validierung positiv, auch wenn eine Organisation dann fehlt.
 3. Wenn die Organisationen mitgeliefert werden, kann beim Validieren nicht unterschieden werden, ob die Organisation im Transferfile, das geliefert wird, vorhanden ist, oder in einem vorgehaltenen IPW-Organisationsfile. Wenn der Validator die Organisation findet, ist es ok für ihn. Die mitgelieferten Organisationen werden importiert.
-4. Mit `--topics "VSADSSMINI_2020_LV95.VSADSSMini"` kann vermieden werden, dass mitgelieferte Organisationen importiert werden.
 
 ## Validierungsmodell
 ```
